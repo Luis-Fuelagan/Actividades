@@ -1,4 +1,4 @@
-package uni1a;
+package modelo;
 
 public class Investigador {
      private String nombre;
@@ -34,7 +34,8 @@ public class Investigador {
 	 public void setInstitucion(String institucion) {
 		 this.institucion = institucion;
 	 } 
-	 public void mostrarDetalles() {
-		 System.out.println(" Nombre: " + nombre  + " | Especialidad: " + especialidad  + " | Institucion: " + institucion);
+	 @Override
+	 public String toString() {
+	     return "Nombre: " + nombre  + " | Especialidad: " + especialidad  + " | Institución: " + institucion;
 	 }
 }

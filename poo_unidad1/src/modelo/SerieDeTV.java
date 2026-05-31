@@ -1,7 +1,7 @@
 /**
  * Class SerieDeTV
  */
-package uni1a;
+package modelo;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -34,13 +34,13 @@ public class SerieDeTV extends ContenidoAudiovisual {
     	return listaTemporada;
     }
     @Override
-    public void mostrarDetalles() {
-        System.out.println(" Detalles de la Serie de TV: ");
-        System.out.println(" ID: " + getId());
-        System.out.println(" Título: " + getTitulo());
-        System.out.println(" Duración en minutos: " + getDuracionEnMinutos());
-        System.out.println(" Género: " + getGenero());
-        System.out.println(" Temporadas: " + this.temporadas);
-        System.out.println();
+    public String toString() {
+        return "Detalles de la Serie de TV:\n" +
+               " ID: " + getId() + "\n" +
+               " Titulo: " + getTitulo() + "\n" +
+               " Duracion: " + getDuracionEnMinutos() + " minutos\n" +
+               " Genero: " + getGenero() + "\n" +
+               " Temporadas: " + this.temporadas + "\n";
+        
     }
 }

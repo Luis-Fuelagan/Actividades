@@ -1,4 +1,4 @@
-package uni1a;
+package modelo;
 
 public class Temporada {
       private int numeroTemporada;
@@ -6,7 +6,7 @@ public class Temporada {
       private int añoLanzamiento;
       
 	  public Temporada(int numeroTemporada, int cantidadEpisodio, int añoLanzamiento) {
-		super();
+		  
 		this.numeroTemporada = numeroTemporada;
 		this.cantidadEpisodio = cantidadEpisodio;
 		this.añoLanzamiento = añoLanzamiento;
@@ -35,8 +35,11 @@ public class Temporada {
 	  public void setAñoLanzamiento(int añoLanzamiento) {
 		  this.añoLanzamiento = añoLanzamiento;
 	  }
-      public void mostrarDetalles() {
-    	  System.out.println(" Temporada: " + numeroTemporada + " Episodio: " + cantidadEpisodio + " Año: " + añoLanzamiento);
-      }
+
+	  @Override
+	  public String toString() {
+		return "Numero de temporadas: " + numeroTemporada + "| Cantidad de Episodios: " + cantidadEpisodio + "| Año de Lanzamieneto: " + añoLanzamiento;
+	  }
+	  
 }
  

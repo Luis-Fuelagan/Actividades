@@ -1,4 +1,4 @@
-package uni1a;
+package modelo;
 
 public class Podcast extends ContenidoAudiovisual {
      private String presentador;
@@ -26,16 +26,16 @@ public class Podcast extends ContenidoAudiovisual {
 	 public void setPlataforma(String plataforma) {
 		 this.plataforma = plataforma;
 	 }
-
-
+	 
+	 
 	 @Override
-	 public void mostrarDetalles() {
-		 System.out.println("=== PODCAST ===");
-		 System.out.println(" ID: " + getId());
-		 System.out.println(" Titulo: " + getTitulo());
-		 System.out.println(" Presentador: " + presentador);
-		 System.out.println(" Plataforma: " + plataforma);
-		 System.out.println(" Duracion: " + getDuracionEnMinutos() + " minutos ");
-		 System.out.println(" Genero: " + getGenero());
-	 } 
+	    public String toString() {
+	        return "=== PODCAST ===\n" +
+	               " ID: " + getId() + "\n" +
+	               " Titulo: " + getTitulo() + "\n" +
+	               " Presentador: " + presentador + "\n" +
+	               " Plataforma: " + plataforma + "\n" +
+	               " Duracion: " + getDuracionEnMinutos() + " minutos \n" +
+	               " Genero: " + getGenero() + "\n";
+	    }
 }

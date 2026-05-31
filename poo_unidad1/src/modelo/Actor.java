@@ -1,4 +1,4 @@
-package uni1a;
+package modelo;
 
 public class Actor {
      private String nombre;
@@ -24,12 +24,12 @@ public class Actor {
 	 public void setEdad(int edad) {
 		 this.edad = edad;
 	 } 
-	 public void mostararInformacion() {
-		 System.out.println("Actor: " + nombre + " Edad: " + edad + "años");
-	 } 	 
+	 //Eliminamos el System.out.println para que la clase no interactue con la consola.
+	 @Override
+     public String toString() {
+         return "Actor: " + nombre + " | Edad: " + edad + " años";
+     }
 }
-
-
 
 
 

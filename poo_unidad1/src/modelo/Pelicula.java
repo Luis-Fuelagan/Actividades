@@ -1,7 +1,7 @@
 /**
  * Class Pelicula
  */
-package uni1a;
+package modelo;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -34,13 +34,13 @@ public class Pelicula extends ContenidoAudiovisual {
     } 
     
     @Override
-    public void mostrarDetalles() {
-        System.out.println(" Detalles de la película: ");
-        System.out.println(" ID: " + getId());
-        System.out.println(" Título: " + getTitulo());
-        System.out.println(" Duración en minutos: " + getDuracionEnMinutos());
-        System.out.println(" Género: " + getGenero());
-        System.out.println(" Estudio: " + estudio);
-        System.out.println();
+    public String toString() {
+        return " Detalles de la película: \n" +
+               " ID: " + getId() + "\n" +
+               " Título: " + getTitulo() + "\n" +
+               " Duración en minutos: " + getDuracionEnMinutos() + "\n" +
+               " Género: " + getGenero() + "\n" +
+               " Estudio: " + estudio + "\n";
+        
     }
 }

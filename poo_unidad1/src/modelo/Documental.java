@@ -1,7 +1,7 @@
 /**
  * Class Documental
  */
-package uni1a;
+package modelo;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -34,14 +34,14 @@ public class Documental extends ContenidoAudiovisual {
     }
     
     @Override
-    public void mostrarDetalles() {
-        System.out.println(" Detalles del Documental: ");
-        System.out.println(" ID: " + getId());
-        System.out.println(" Título: " + getTitulo());
-        System.out.println(" Duración en minutos: " + getDuracionEnMinutos());
-        System.out.println(" Género: " + getGenero());
-        System.out.println(" Tema: " + this.tema);
-        System.out.println();
+    public String toString() {
+        return " Detalles del Documental: \n" +
+               " ID: " + getId() + "\n" +
+               " Título: " + getTitulo() + "\n" +
+               " Duración en minutos: " + getDuracionEnMinutos() + "\n" +
+               " Género: " + getGenero() + "\n" +
+               " Tema: " + tema + "\n";
+        
         
     }
 }

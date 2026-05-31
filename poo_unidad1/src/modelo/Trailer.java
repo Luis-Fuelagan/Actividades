@@ -1,4 +1,4 @@
-package uni1a;
+package modelo;
 
 public class Trailer extends ContenidoAudiovisual {
       private String  pelicula;
@@ -38,15 +38,15 @@ public class Trailer extends ContenidoAudiovisual {
 	  }
 
 	  @Override
-	  public void mostrarDetalles() {
-		  System.out.println("=== Trailer ===");
-			 System.out.println(" ID: " + getId());
-			 System.out.println(" Titulo: " + getTitulo());
-			 System.out.println(" Pelicula promocionadad: " + pelicula);
-			 System.out.println(" Fecha de lanzamiento: " + fechaLanzamiento);
-			 System.out.println(" Visualizaciones: " + numVisualizacion);
-			 System.out.println(" Duracion: " + getDuracionEnMinutos() + " minutos ");
-			 System.out.println(" Genero: " + getGenero());
-		
-	  }
+	    public String toString() {
+	        return "=== Trailer ===\n" +
+	               " ID: " + getId() + "\n" +
+	               " Titulo: " + getTitulo() + "\n" +
+	               " Pelicula promocionada: " + pelicula + "\n" +
+	               " Fecha de lanzamiento: " + fechaLanzamiento + "\n" +
+	               " Visualizaciones: " + numVisualizacion + "\n" +
+	               " Duracion: " + getDuracionEnMinutos() + " minutos \n" +
+	               " Genero: " + getGenero() + "\n";
+	        
+	    }
 }
