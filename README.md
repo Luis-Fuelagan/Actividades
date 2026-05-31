@@ -7,33 +7,34 @@ Características y Cambios Realizados (Unidad 4)
 En esta etapa del proyecto, se paso de un enfoque estructurado monolítico a un solido software, realizando los siguientes cambios clave:
 
 separación de Responsabilidades (MVC): Se aisló por completo la lógica de presentación (interfaz de consola) de la lógica de negocio y de los datos.
-Desacoplamiento del Modelo (Código Limpio): Se eliminaron todas las instrucciones `System.out.println` de las clases del modelo (`Pelicula`, `SerieDeTV`, etc.). Ahora las clases implementan el método estándar `@Override public String toString()` para formatear sus datos sin interactuar con la consola.
-Persistencia en Archivos CSV: Se diseñó un mecanismo de lectura y escritura de archivos planos (`contenidos.csv`, `actores.csv`, `temporadas.csv`, `investigadores.csv`) centralizado en el controlador.
+Desacoplamiento del Modelo (Código Limpio): Se eliminaron todas las instrucciones System.out.println de las clases del modelo (Pelicula, SerieDeTV). Ahora las clases implementan el método estándar @Override public String toString() para formatear sus datos sin interactuar con la consola.
+Persistencia en Archivos CSV: Se diseñó un mecanismo de lectura y escritura de archivos planos (contenidos.csv, actores.csv, temporadas.csv, investigadores.csv) centralizado en el controlador.
 
 Estructura del Código
 
 El código fuente se encuentra organizado dentro del directorio src bajo paquetes específicos que delimitan sus responsabilidades:
 
-poo_unidad1/
-│
-├── src/
-│   ├── modelo/           
-│   │   ├── ContenidoAudiovisual.java (Clase Abstracta)
-│   │   ├── Pelicula.java
-│   │   ├── SerieDeTV.java
-│   │   ├── Documental.java
-│   │   ├── Podcast.java
-│   │   ├── Trailer.java
-│   │   ├── Actor.java
-│   │   ├── Temporada.java
-│   │   └── Investigador.java
-│   │
-│   ├── controlador/       # Coordinador entre la Vista y el Modelo. Maneja las colecciones y la persistencia.
-│   │   └── ContenidoContador.java
-│   │
-│   └── vista/             # Interfaz de usuario. Captura entradas de teclado y muestra información.
-│       └── PruebaAudioVisual.java
-│
+poo_unidad1
+src
+
+modelo           
+ContenidoAudiovisual.java (Clase Abstracta)
+Pelicula.java
+SerieDeTV.java
+Documental.java
+Podcast.java
+Trailer.java
+Actor.java
+Temporada.java
+Investigador.java
+
+controlador     # Coordinador entre la Vista y el Modelo. 
+ContenidoContador.java
+
+vista            # Interfaz de usuario. Captura entradas de teclado y muestra información.
+PruebaAudioVisual.java
+
+
 Ejecución del Proyecto
 Para correr la aplicación desde su IDE:
 
